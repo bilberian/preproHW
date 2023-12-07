@@ -1,0 +1,14 @@
+.new-arrivals {
+  background: #F8F3F4;
+  min-height: 148px;
+}
+.new-arrivals__left_title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #F16D7F;
+}
+.new-arrivals__right_links {
+  color: #636363;
+  font-size: 14px;
+  font-weight: 300;
+}/*# sourceMappingURL=catalog_style.css.map */
