@@ -1,0 +1,195 @@
+@import 'vars';
+@import 'mixins';
+
+.registration {
+    background: #F8F3F4;
+    min-height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        &_title {
+            font-size: 24px;
+            font-weight: 400;
+            color: $colorSite;
+        }
+    }
+}
+
+.regform {
+    margin-top: 64px;
+    margin-bottom: 96px;
+    display: flex;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        max-width: 360px;
+
+        &_heading {
+            color: $colorTextBlack;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        input {
+            width: 360px;
+            height: 45px;
+            border: 1px solid #A4A4A4;
+            padding-left: 17px;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+
+            &::placeholder {
+                color: #B1B1B1;
+            }
+        }
+
+        &_radiobuttons {
+            display: flex;
+            max-width: 132px;
+            align-items: center;
+            color: $colorTextBlack;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-bottom: 13px;
+
+            input {
+                display: none;
+            }
+
+            label {
+                display: inline-block;
+                position: relative;
+                padding-left: 25px;
+                padding-right: 20px;
+                line-height: 18px;
+                user-select: none;
+
+            }
+
+            label:before {
+                content: "";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                position: absolute;
+                left: 0;
+                bottom: 1px;
+                border-radius: 50%;
+                border: 1px solid #A4A4A4;
+                transition: $transitionSite;
+            }
+
+            input[type=radio]:checked+label:before {
+                background-color: $colorSite;
+                border: 2px solid $colorWhite;
+                outline: 1px solid $colorSite;
+                box-sizing: border-box;
+                transition: $transitionSite;
+            }
+
+            label:hover:before {
+                outline: 2px solid #A4A4A4;
+                transition: $transitionSite;
+            }
+        }
+
+        &_explained {
+            color: #B1B1B1;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &_button {
+            width: 167px;
+            height: 50px;
+            border: 1px solid $colorSite;
+            background-color: $colorSite;
+            transition: $transitionSite;
+            color: $colorWhite;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            & path {
+                transition: $transitionSite;
+            }
+
+            &:hover {
+                border-color: #A4A4A4;
+                color: $colorSite;
+                background-color: $colorWhite;
+            }
+
+            &:hover path {
+                fill: $colorSite
+            }
+        }
+    }
+
+    &__advert {
+        margin-left: 128px;
+        color: $colorTextBlack;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &_heading {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-inline-start: 0px;
+        }
+
+        ul li {
+            padding-bottom: 16px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 23px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .registration {
+        &__left {
+            padding-left: 16px;
+        }
+    }
+
+    .regform {
+        &__form {
+            padding-left: 16px;
+        }
+
+        &__advert {
+            margin-left: 23px;
+            padding-right: 16px;
+            font-size: 16px;
+
+            &_heading {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
